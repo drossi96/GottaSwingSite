@@ -1,0 +1,833 @@
+/* begin FONTS*/
+
+.barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'satisfy';
+    src: url(/fonts/Satisfy-Regular.ttf);
+}
+
+
+/* END FONTS*/
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+/* begin NAV */
+
+.navbar-toggler{
+    box-shadow: 0px 2px 10px black;
+}
+
+.navbar { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.navbar-nav { /* new to swing, classes, LARGE screen*/
+    background-color: #faefdb;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.navbar-nav a,
+.navbar-nav button {
+    font-size: 50px;
+    font-family: "Barlow Condensed";
+    font-weight: bold;
+    color: #224a49;
+    text-shadow: 3px 3px 0px #cdffea;
+}
+
+.navHover:hover{
+    color: #ff6738;
+    text-shadow: 3px 3px 0px #ffcbbb;
+}
+
+.navBtn:focus, .navBtn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.homepageLogoLargeScreen {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageLogoLargeScreen img{
+    width: 250px;
+}
+
+
+
+
+.navbar-nav i {
+    color: #6eb8b3;
+    transform: translateY(25%);
+}
+
+.dropdown-menu{
+    background-color: #faefdb;
+}
+
+
+.dropdown-menu>li{
+    background-color: #faefdb;
+}
+
+.dropdown-menu>li :hover{
+    background-color: #ff6738;
+    color: white;
+    text-shadow: none;
+}
+
+
+/* END NAV */
+
+
+
+
+/* begin nav media queries only */
+
+
+
+@media (min-width: 992px) {
+
+    /* changes small screen logo to NOT display if screen is 992px or higher */
+    .homepageLogoSmallScreen img {
+        display: none;
+    }
+
+    .landscapeLink{
+        display: none;
+    }
+}
+
+@media(max-width: 650px) {
+    .landscapeLink{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 991px){
+
+    /* displays the small nav when the screen is 991px or lower */
+    .smallNav {
+
+        border-bottom: 2px solid #234d4b;
+        position: fixed;
+        background-color: #f6eedc;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 20vh;
+        width: 100%;
+    }
+
+    .navbar-nav { 
+        position:fixed;
+        background-color: #f6eedc;
+        border-top: 2px solid #234d4b;
+        border-bottom: 2px solid #234d4b;
+        transform: translateY(19.5vh);
+        /* moves navbar vertical drop down down so that nav can still be used*/
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        /* needed for vertically aligned screens */
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        gap: 0px;
+    }
+
+    .navbar-nav>i {
+        /* deletes star image decoration in nav on screens 991px or lwoer */
+        display: none;
+    }
+
+
+
+    /* changes regular nav screen logo/home button to NOT display if screen is 991px or smaller */
+    .homepageLogoLargeScreen {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+    .dropDownDIVS {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dropdown-menu>li a {
+        font-size: 30;
+    }
+}  /* END MAX WIDTHS 991px*/
+
+
+
+
+
+
+/* BEGIN MAX WIDTHS 991px */
+@media (max-width: 991px) {
+
+    /* displays the small nav when the screen is 991px or lower  VIEW */
+    .smallNav {
+        position: fixed;
+        background-color: #f6eedc;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+        height: 20vh;
+        width: 100%;
+        gap: 5%;
+    }
+
+
+    .navbar-nav { /* las navbar-nav style */
+        background-color: #f6eedc;
+        border-top: 2px solid #234d4b;
+        border-bottom: 2px solid #234d4b;
+        transform: translateY(19.75vh);
+        /* moves navbar vertical drop down down so that nav can still be used*/
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* needed for vertically aligned screens */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+
+    .navbar-nav>i {
+        /* deletes star image decoration in nav on screens 991px or lwoer */
+        display: none;
+    }
+
+    .homepageLogoSmallScreen {
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+    }
+
+    .homepageLogoSmallScreen h4{
+        font-size: 50px;
+        color: rgb(200, 0, 0);
+        text-shadow: 3px 2px 15px #234d4b;
+        font-family: 'satisfy'
+    }
+
+    .homepageLogoSmallScreen>img {
+        height: 19vh;
+    }
+
+
+    .dropDownDIVS {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dropdown-menu>li a {
+        color:#136f6c;;
+        font-size: 30px;
+        border: none;
+    }
+
+}
+
+
+@media (max-width:991px) {
+
+    /* changes navbar flex display direction to row... for some reason, 
+    using row was not working for 100% width on larger screens, 
+    but using column was breaking the dropdown when on smallers screens. */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+@media (max-width:1280px) {
+    .navbar-nav a {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1050px) {
+    .navbar-nav a {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1330px) {
+    .navbar-nav a {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1150px) {
+    .navbar-nav a {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1060px) {
+    .navbar-nav a {
+        font-size: 30px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 30px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+
+@media (max-width:991px) {
+    .navbar-nav a {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+/* END NAV MEDIA QUERIES */
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN hero regular css styles.*/
+
+
+/* Styles for hero section */
+.heroLandingSectionDIV {
+    background-color:  #98dddf;;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.videoLoopDIV {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+}
+
+.videoLoopDIV>video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    /* Inherit border-radius from parent .videoLoopDIV */
+}
+
+.heroContent {
+    background-color:#98dddf;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heroTitle {
+    height: 50%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+
+.heroTitle>h1 {
+    font-family: "Barlow Condensed";
+    font-weight: bold;
+    font-size: 10rem;
+    font-weight: 700;
+
+    
+    color: rgb(255, 208, 79);
+    text-shadow: 4px 5px 0px rgb(210, 42, 42);
+}
+
+.heroRibbon{
+    background-color: #b54848;
+    border: 5px solid rgb(172, 25, 25);
+    border-radius: 10px;
+    width: 50vw;
+    min-height: 10vh;
+    max-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroRibbon>h4{
+    font-size: 4vw;
+    font-family: 'satisfy';
+    color: white;
+    text-shadow: 4px 1px 10px black;
+}
+
+/* end regular hero css styles */
+
+/* begin hero media queries */
+
+
+@media (max-width:900px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 8rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:800px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 6rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:550px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:900px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:839px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:670px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:576px) { /* 'dc maryland and virginia' fonts */
+    
+    .heroRibbon{
+        width: 100%;
+    }
+    
+    .heroRibbon>h4 {
+        font-size: 9vw;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .heroLandingSectionDIV {
+        height: 30vh;
+        /* Adjust height for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .heroLandingSectionDIV {
+        height: 20vh;
+        /* Adjust height for small devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .heroLandingSectionDIV {
+        height: 15vh;
+        /* Adjust height for extra small devices */
+    }
+}
+
+/* END hero MEDIA QUERIES */
+
+
+
+.classDETAILS {
+    background-color: #98dddf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.classDetailsTAG {
+    color: #ffdf50;
+    text-shadow: 5px 5px 0px rgb(225, 64, 6);
+    padding: 5px;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Barlow Condensed';
+}
+
+.ClassDetailsLIST {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    padding-left: 50px;
+    list-style: inside;
+    align-self: flex-start;
+    font-family: 'Barlow Condensed';
+    font-weight: bolder;
+    font-size: 3rem;
+    color: rgb(12, 61, 78);
+    text-shadow: 2px 2px 0px #a6ffec;
+}
+
+
+.BoldTextList{
+    align-self: flex-start;
+    font-family: 'Barlow Condensed';
+    font-size: 1.75rem;
+    color: rgb(19, 69, 86);
+    padding-left: 50px;
+}
+
+
+
+.registerForClass {
+    color: rgb(255, 208, 79);
+    text-shadow: 3px 3px 0px rgb(210, 42, 42);
+    font-family: 'Barlow Condensed';
+    font-weight: bolder;
+    font-size: 4rem;
+    transition: .5s;
+}
+
+.registerForClass:hover{
+    text-decoration: underline;
+    transition: .5s;
+    color: rgb(249, 255, 79);
+    
+    text-shadow: 3px 3px 0px rgb(255, 112, 112);
+}
+
+/* Media Queries for Responsiveness for dance info  */
+
+/* For medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .ClassDetailsLIST {
+        width: 70%; /* Increase width for readability */
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .classDetailsTAG {
+        font-size: 4rem; /* Reduce header size */
+    }
+
+    .registerForClass {
+        font-size: 1.8rem; /* Adjust link size */
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 768px) {
+    .ClassDetailsLIST {
+        width: 90%; /* Full width for smaller screens */
+        font-size: 2rem; /* Smaller font for better fit */
+    }
+
+    .classDetailsTAG {
+        font-size: 3rem; /* Further reduce header size */
+    }
+
+    .registerForClass {
+        font-size: 1.5rem; /* Adjust link size */
+        text-align: center; /* Center the text */
+    }
+}
+
+/* For extra small screens (very small phones) */
+@media (max-width: 480px) {
+    .ClassDetailsLIST {
+        width: 100%; /* Use full width */
+        font-size: 1.8rem; /* Smaller font for readability */
+    }
+
+    .classDetailsTAG {
+        font-size: 2.5rem; /* Compact header */
+    }
+
+    .registerForClass {
+        font-size: 1.2rem; /* Smaller link text */
+        padding: 10px; /* Add padding for touch-friendly design */
+    }
+}
+
+
+
+
+
+
+/* Main container for all contact sections */
+
+
+
+.contactDIV{
+    background-color:#281f1a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 30vh;
+
+    text-decoration: none;
+    list-style: none;   
+}
+
+.contactDIV ul{
+    list-style: none;
+}
+
+.contactDIV h4 , p , a{
+    color: #f8ebd7;
+    text-decoration: none;
+}
+
+
+
+
+
+.contactDIVCONTENT{
+    display: flex;
+    flex-direction: row;
+}
+
+/* end social and footer */
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 960px) {
+    .contactDIV {
+        flex-direction: column;
+        height: auto; /* Allow the container to adjust height dynamically */
+        padding: 2rem 1rem; /* Add padding for */
+    }
+}
+    

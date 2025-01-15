@@ -1,0 +1,1544 @@
+/* begin FONTS*/
+
+.barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'satisfy';
+    src: url(/fonts/Satisfy-Regular.ttf);
+}
+
+
+/* END FONTS*/
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+/* begin NAV */
+
+.navbar-toggler{
+    box-shadow: 0px 2px 10px black;
+}
+
+.navbar { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.navbar-nav { /* new to swing, classes, LARGE screen*/
+    background-color: #faefdb;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.navbar-nav a,
+.navbar-nav button {
+    font-size: 50px;
+    font-family: "Barlow Condensed";
+    font-weight: bold;
+    color: #224a49;
+    text-shadow: 3px 3px 0px #cdffea;
+}
+
+.navHover:hover{
+    color: #ff6738;
+    text-shadow: 3px 3px 0px #ffcbbb;
+}
+
+.navBtn:focus, .navBtn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.homepageLogoLargeScreen {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageLogoLargeScreen img{
+    width: 250px;
+}
+
+
+
+
+.navbar-nav i {
+    color: #6eb8b3;
+    transform: translateY(25%);
+}
+
+.dropdown-menu{
+    background-color: #faefdb;
+}
+
+
+.dropdown-menu>li{
+    background-color: #faefdb;
+}
+
+.dropdown-menu>li :hover{
+    background-color: #ff6738;
+    color: white;
+    text-shadow: none;
+}
+
+
+/* END NAV */
+
+
+
+
+/* begin nav media queries only */
+
+
+
+@media (min-width: 992px) {
+
+    /* changes small screen logo to NOT display if screen is 992px or higher */
+    .homepageLogoSmallScreen img {
+        display: none;
+    }
+
+    .landscapeLink{
+        display: none;
+    }
+}
+
+@media(max-width: 650px) {
+    .landscapeLink{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 991px){
+
+    /* displays the small nav when the screen is 991px or lower */
+    .smallNav {
+
+        border-bottom: 2px solid #234d4b;
+        position: fixed;
+        background-color: #f6eedc;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 20vh;
+        width: 100%;
+    }
+
+    .navbar-nav { 
+        position:fixed;
+        background-color: #f6eedc;
+        border-top: 2px solid #234d4b;
+        border-bottom: 2px solid #234d4b;
+        transform: translateY(19.5vh);
+        /* moves navbar vertical drop down down so that nav can still be used*/
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        /* needed for vertically aligned screens */
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        gap: 0px;
+    }
+
+    .navbar-nav>i {
+        /* deletes star image decoration in nav on screens 991px or lwoer */
+        display: none;
+    }
+
+
+
+    /* changes regular nav screen logo/home button to NOT display if screen is 991px or smaller */
+    .homepageLogoLargeScreen {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+    .dropDownDIVS {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dropdown-menu>li a {
+        font-size: 30;
+    }
+}  /* END MAX WIDTHS 991px*/
+
+
+
+
+
+
+/* BEGIN MAX WIDTHS 991px */
+@media (max-width: 991px) {
+
+    /* displays the small nav when the screen is 991px or lower  VIEW */
+    .smallNav {
+        position: fixed;
+        background-color: #f6eedc;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+        height: 20vh;
+        width: 100%;
+        gap: 5%;
+    }
+
+
+    .navbar-nav { /* las navbar-nav style */
+        background-color: #f6eedc;
+        border-top: 2px solid #234d4b;
+        border-bottom: 2px solid #234d4b;
+        transform: translateY(19.75vh);
+        /* moves navbar vertical drop down down so that nav can still be used*/
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* needed for vertically aligned screens */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+
+    .navbar-nav>i {
+        /* deletes star image decoration in nav on screens 991px or lwoer */
+        display: none;
+    }
+
+    .homepageLogoSmallScreen {
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+    }
+
+    .homepageLogoSmallScreen h4{
+        font-size: 50px;
+        color: rgb(200, 0, 0);
+        text-shadow: 3px 2px 15px #234d4b;
+        font-family: 'satisfy'
+    }
+
+    .homepageLogoSmallScreen>img {
+        height: 19vh;
+    }
+
+
+    .dropDownDIVS {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dropdown-menu>li a {
+        color:#136f6c;;
+        font-size: 30px;
+        border: none;
+    }
+
+}
+
+
+@media (max-width:991px) {
+
+    /* changes navbar flex display direction to row... for some reason, 
+    using row was not working for 100% width on larger screens, 
+    but using column was breaking the dropdown when on smallers screens. */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+@media (max-width:1280px) {
+    .navbar-nav a {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1050px) {
+    .navbar-nav a {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1330px) {
+    .navbar-nav a {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1150px) {
+    .navbar-nav a {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 35px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+@media (max-width:1060px) {
+    .navbar-nav a {
+        font-size: 30px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 30px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+
+@media (max-width:991px) {
+    .navbar-nav a {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+        
+        transform: translateY(0%);
+    }
+
+    .navbar-nav button {
+        font-size: 50px;
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        color: #234d4b;
+        text-shadow: 3px 3px 0px #cdffea;
+    }
+}
+
+/* END NAV MEDIA QUERIES */
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN hero regular css styles.*/
+
+
+/* Styles for hero section */
+.heroLandingSectionDIV {
+    background-color:  #faefdb;;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+}
+
+.videoLoopDIV {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+}
+
+.videoLoopDIV>video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    /* Inherit border-radius from parent .videoLoopDIV */
+}
+
+.heroContent {
+    background-color: rgb(249, 239, 218);
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.heroTitle {
+    height: 50%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+
+.heroTitle>h1 {
+    font-family: "Barlow Condensed";
+    font-weight: bold;
+    font-size: 10rem;
+    font-weight: 700;
+    color: #224a49;
+    text-shadow: 6px 8px 0px #a9c9bb;
+}
+
+.heroRibbon{
+    background-color: #ff6739;
+    width: 50vw;
+    min-height: 10vh;
+    max-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroRibbon>h4{
+    font-size: 4vw;
+    font-family: 'satisfy';
+    color: white;
+    text-shadow: 4px 1px 10px black;
+}
+
+/* end regular hero css styles */
+
+/* begin hero media queries */
+
+
+@media (max-width:900px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 8rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:800px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 6rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:550px) { /* large 'swing dancing' fonts */
+    .heroTitle h1{
+        font-family: "Barlow Condensed";
+        font-weight: bold;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #224a49;
+        text-shadow: 6px 8px 0px #a9c9bb;
+    }
+}
+
+@media (max-width:900px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:839px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:670px) { /* 'dc maryland and virginia' fonts */
+    .heroRibbon>h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:576px) { /* 'dc maryland and virginia' fonts */
+    
+    .heroRibbon{
+        width: 100%;
+    }
+    
+    .heroRibbon>h4 {
+        font-size: 9vw;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .heroLandingSectionDIV {
+        height: 30vh;
+        /* Adjust height for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .heroLandingSectionDIV {
+        height: 20vh;
+        /* Adjust height for small devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .heroLandingSectionDIV {
+        height: 15vh;
+        /* Adjust height for extra small devices */
+    }
+}
+
+/* END hero MEDIA QUERIES */
+
+/* begin about us welcome regular css styles. */
+
+.aboutUsWelcome{
+    height: 100vh;
+    display: flex; /* change to column during responsive screen changes. change width of left and right divs */
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #faefdb;
+}
+
+.aboutUsLEFT{
+    background-color: #faefdb;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.aboutUsLEFTContent{
+    height: 95%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aboutUsLEFTContent h1{
+    color: white;
+    text-shadow: 8px 6px 0px #153029;
+    background-color: #527d73;
+    font-family: 'barlow condensed';
+    font-size: 10vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.aboutUsLEFTContent p{
+    color: black;
+    font-family: 'barlow condensed';
+    font-size: 2rem;
+    word-spacing: 10px;
+}
+
+.aboutUsLEFTContent a{
+    color: #ff6739;
+    font-family: 'barlow condensed'; 
+    font-size: 3rem;
+    transform: translateY(-5vh);
+    transition: .5s; 
+}
+
+.aboutUsLEFTContent a:hover {
+    color: black;
+    font-family: 'barlow condensed'; 
+    font-size: 3rem;
+    transition: .5s;
+}
+
+.ourStory{
+    text-decoration: underline;
+}
+
+
+
+.aboutUsRIGHT{
+    background-color: #faefdb;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutusRightContent{
+    padding-right: 5px;
+    display: flex;
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutusRightContent h2{
+    font-family: 'satisfy';
+    font-size: 7rem;
+    color: white;
+    text-shadow: 5px 3px 10px #224a49;
+}
+
+.aboutusRightVideoFrame{
+    width: 75%;
+    height: 50%;
+}
+
+/* END ABOUT US WELCOME regular css styles*/
+
+
+/* Begin ABOUT US WELCOME media queries*/
+
+@media(max-width:1024px){
+    .aboutUsLEFTContent>p{
+        width: 100%;
+        font-size: 1.75rem;
+        color: black;
+        font-weight: 500;
+    }
+}
+
+@media(max-width:991px){
+    .aboutUsWelcome{
+        height: 150vh;
+        display: flex; /*here during media queries, change to column during responsive screen changes.
+        change width & height of left and right divs */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .aboutUsLEFT{
+        width: 90%;
+        height: 60%;
+    }
+
+    .aboutUsLEFTContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .aboutUsLEFTContent p{
+        color: black;
+        font-family: 'barlow condensed';
+        font-size: 2rem;
+        align-self: center;
+        justify-self: center;
+        word-spacing: 5px;
+    }
+
+    .aboutUsLEFTContent a{
+        color: #ff6739;
+        font-family: 'barlow condensed'; 
+        font-weight: bold;
+        font-size: 3rem;
+        transform: translateY(0vh);
+        transition: .5s; 
+    }
+    
+
+    .aboutUsRIGHT{
+        width: 100%;
+    }
+    
+
+}
+
+
+@media(max-width:600px) {
+    .aboutusRIGHTContent>h2{
+        font-size: 5rem;
+    }
+}
+
+
+@media(max-width:425px) {
+    .aboutusRIGHTContent>h2{
+        font-size: 4rem;
+    }
+}
+
+
+
+/* END ABOUT US WELCOME media queries*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN EMAIL regular css styles */
+
+    .emailDIV{
+        width: 100%;
+        height: 80%;
+        background-color: #74b5af;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .emailDivLeft{
+        background-color: #73b4ae;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding-top: 10rem;
+        padding-left: 5rem;
+    }
+
+    .emailDivLeft h4{
+        font-family: 'barlow condensed';
+        color: #214a48;
+        font-size: 3rem;
+        padding-left: 1rem;
+    }
+
+    
+    .emailDivLeft h1{
+        font-family: 'barlow condensed';
+        font-size: 10rem;
+        color: #cdffea;
+        text-shadow: 5px 5px 0px #224a49;
+        padding-left: 1rem;
+    }
+
+    .emailRibbon{
+        background-color: #e54027;
+        height: 10rem;
+        width: 90%;
+        color: white;
+        font-family: 'satisfy';
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .emailDivLeft p{
+        font-family: 'barlow condensed';
+        font-size: 2.5rem;   
+        padding-left: 1rem;
+    }
+
+    /* END EMAIL LEFT */
+
+
+
+
+
+
+ /* BEGIN EMAIL RIGHT */
+
+    .emailDivRIGHT{
+        background-color: #73b4ae;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0rem;
+        gap: 1rem;
+    }
+
+    .emailDivRIGHT input{
+        color: black;
+        height: 5rem;
+        width: 75%;
+        font-family: 'barlow condensed';
+        font-size: 2.5rem;
+        border: none;
+    }
+
+    .emailDivRIGHT button{
+        color: #214a48;
+        background: none;
+        border: none;
+        font-family: 'barlow condensed';
+        font-size: 3rem;
+        text-decoration: underline;
+        transition: .5s;
+    } 
+
+    .emailDivRIGHT button:hover{
+        color: white;
+    }
+
+
+ /* END EMAIL RIGHT */
+
+/* END EMAIL regular css styles */
+
+
+
+/* BEGIN email media queries*/
+
+
+@media (max-width:1024px) {
+    
+    .emailDIV{
+        width: 100vw;
+        height: 150vh;
+        background-color: #74b5af;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .emailDivLeft{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+
+    
+    .emailDivLeft h4{
+        font-family: 'barlow condensed';
+        color: #214a48;
+        font-size: 3rem;
+        transform: translateY(100%);
+    }
+
+    .emailDivLeft>p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        text-align: center;
+    }
+
+
+    .emailRibbon{
+        background-color: #e54027;
+        height: 10rem;
+        width: 80%;
+        justify-self: start;
+        color: white;
+        font-family: 'satisfy';
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 1rem;
+    }
+
+
+    .emailDivRIGHT{
+        background-color: #73b4ae;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 2rem;
+    }
+
+    .emailDivRIGHT input{
+        color: black;
+        height: 5rem;
+        width: 75%;
+        font-family: 'barlow condensed';
+        font-size: 2.5rem;
+        border: none;
+    }
+
+    .emailDivRIGHT button{
+        color: #214a48;
+        background: none;
+        border: none;
+        font-family: 'barlow condensed';
+        font-size: 3rem;
+        text-decoration: underline;
+        transition: .5s;
+    } 
+
+    .emailDivRIGHT button:hover{
+        color: white;
+    }
+
+}
+
+
+@media (max-width:800px) {
+
+    .emailDivLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .emailDivLeft>h4{
+        font-size: 2.5rem;
+    }
+
+    .emailDivLeft>h1{
+        font-size: 8rem;
+    }
+
+    .emailDivLeft>p{
+        width: 80%;
+    }
+}
+
+@media (max-width:550px) {
+    .emailDivLeft>h4{
+        font-size: 2rem;
+        transform: translateY(75%);
+    }
+
+    .emailDivLeft>h1{
+        font-size: 5rem;
+    }
+
+    .emailDivLeft>p{
+        width: 100%;
+    }
+}
+
+
+
+/* END email media queries*/
+
+
+
+
+/* BEGIN classes regular css styles */
+
+.ourClassesDIV{
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ourClassesTOP{
+    background-color: #d98058;
+    align-self: start;
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.ourClassesTOP>h4{
+    color: #244748 ;
+    font-family: 'Barlow Condensed';
+    font-size: 3.5rem;
+    font-weight: bold;
+    transform: translateY(1rem);
+}
+
+.ourClassesTOP>h1{
+    color: #eae4dc ;
+    font-family: 'Barlow Condensed';
+    font-size: 10rem;
+    font-weight: bolder;
+    text-shadow: 8px 8px 1px #982e00;
+}
+
+
+.ourClasses3Choices{
+    background-color: #d98058;
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.classChoice{
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    opacity: 1;
+
+}
+
+.classPicture:hover{
+    opacity: .75;
+    transition: .25s;
+}
+
+
+.beginnerClass:hover .beginnerBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+.beginnerClass:hover .beginnerPicture {
+    opacity: .75;
+    transition: .25s;
+}
+
+.beginnerPicture:hover .beginnerBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+
+
+.intermediateClass:hover .intermediateBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+.intermediateClass:hover .intermediatePicture {
+    opacity: .75;
+    transition: .25s;
+}
+
+.intermediatePicture:hover .intermediateBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+
+
+
+
+.specialtyClass:hover .specialtyBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+.specialtyClass:hover .specialtyPicture {
+    opacity: .75;
+    transition: .25s;
+}
+
+.specialtyPicture:hover .specialtyBanner {
+    background-color: #e44027; /* Change to red on hover */
+    transition: .25s;
+}
+
+
+.classLinks{
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.classPicture{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.classBanner {
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    font-size: 3rem;
+    color: #f6eedc;
+    background-color: #4f7b70 ;
+
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    text-decoration: none;
+    
+    transition: .25s;
+}
+
+.beginnerPicture{
+    background-image: url(/images/Beginner.jpg);
+    
+    transition: .25s;
+}
+
+.intermediatePicture{
+    background-image: url(/images/Intermediate.png);
+    
+    transition: .25s;
+}
+
+.specialtyPicture{
+    background-image: url(/images/Specialty.png);
+    
+    transition: .25s;
+}
+
+/* END classes regular css styles */
+
+
+
+/* Begin classes media queries */
+
+
+@media(max-width:1776px) {
+
+
+    .classPicture{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position:calc(100%);
+        background-size: cover;
+    }
+
+    .specialtyPicture{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position:calc(10%);
+        background-size: cover;
+    }
+
+}
+
+
+
+
+@media(max-width:1400px) {
+
+    .classPicture{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position:calc(100%);
+        background-size: cover;
+    }
+
+    .intermediatePicture{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position:calc(85%);
+        background-size: cover;
+    }
+
+    
+    .specialtyPicture{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position:calc(5%);
+        background-size: cover;
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:1380px){
+
+    .classPicture{
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position:calc(100%);
+        background-size: cover;
+    }
+
+    .specialtyPicture{
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position:calc(10%);
+        background-size: cover;
+    }
+
+    .classBanner p{
+        font-size: 2rem;
+    }
+
+
+    
+
+    .classLinks{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .classBanner{
+        height: 50%;
+        letter-spacing: 5px;
+    }
+
+
+
+}
+
+
+
+
+/* Responsive Styles for screens 960px or less */
+@media screen and (max-width: 960px) {
+    
+    /* Adjust the main container to allow dynamic height */
+    .ourClassesDIV {
+        height: auto; /* Remove fixed height to allow content to expand */
+    }
+    
+    /* Adjust the top section to fit smaller screens */
+    .ourClassesTOP {
+        height: auto; /* Remove fixed height */
+        padding: 20px 0; /* Optional: Add padding for spacing */
+    }
+    
+    .ourClassesTOP > h4 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        transform: translateY(0.5rem); /* Adjust translation */
+    }
+    
+    .ourClassesTOP > h1 {
+        font-size: 6rem; /* Reduce font size significantly */
+        text-shadow: 4px 4px 0.5px #982e00; /* Adjust text shadow */
+    }
+    
+    /* Change the layout of the class choices to column */
+    .ourClasses3Choices {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center align the cards */
+        justify-content: flex-start; /* Align items to the start */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px 0; /* Optional: Add padding for spacing */
+    }
+    
+    /* Adjust individual class cards */
+    .classChoice {
+        width: 80%; /* Make cards wider for better readability */
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+    
+    /* Optional: Adjust the classPicture height for smaller screens */
+    .classPicture {
+        height: 200px; /* Reduce image height */
+    }
+    
+    /* Optional: Adjust the classBanner font size */
+    .classBanner {
+        font-size: 2rem; /* Reduce font size */
+        height: 20%; /* Adjust height if necessary */
+    }
+    
+    /* Optional: Adjust hover effects for touch devices */
+    .classChoice:hover .classBanner,
+    .classChoice:focus .classBanner {
+        background-color: #e44027; /* Maintain hover effect */
+    }
+
+}
+
+/* Adjust background position for smaller screens */
+@media screen and (max-width: 960px) {
+    .classPicture {
+        background-position-y: 95%; /* Move up by 2% */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .classPicture {
+        background-position-y: 90%; /* Move up by another 2% */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .classPicture {
+        background-position-y: 99%; /* Move up by another 2% */
+    }
+}
+
+
+
+
+
+
+/* END classes media queries */
+
+
+
+
+
+
+
+
+
+/* begin social and footer */
+
+/* Main container for all contact sections */
+
+
+
+/* Main container for all contact sections */
+
+
+
+.contactDIV{
+    background-color:#281f1a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 30vh;
+
+    text-decoration: none;
+    list-style: none;   
+}
+
+.contactDIV ul{
+    list-style: none;
+}
+
+.contactDIV h4 , p , a{
+    color: #f8ebd7;
+    text-decoration: none;
+}
+
+
+
+
+
+.contactDIVCONTENT{
+    display: flex;
+    flex-direction: row;
+}
+
+/* end social and footer */
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 960px) {
+    .contactDIV {
+        flex-direction: column;
+        height: auto; /* Allow the container to adjust height dynamically */
+        padding: 2rem 1rem; /* Add padding for */
+    }
+}
+    

@@ -2,7 +2,7 @@
 
 ##Description##
 
-My GottaSwing Site is a built-from-scratch mock-up imitation website created for the purpose of showcasing my web development skills. It demonstrates my proficiency in HTML, CSS, and JavaScript by replicating and the refining the website of gottaswing.com. My site also
+My GottaSwing Site is a built-from-scratch mock-up website created for the purpose of showcasing my web development skills. It demonstrates my proficiency in HTML, CSS, and JavaScript by replicating and the refining the website of gottaswing.com. My site also
 demonstrates my ability to use the bootstrap framework libraries to make responsive and dynamic HTML, CSS, and JS elements. GottaSwing.com is a website designed for a swing dancing event and teaching company in the Washington DC, Maryland , and Virginia area, specializing 
 in jitterbug lindy hop, and other jazz dancing. My site, built from scratch, aims to provide a vibrant and engaging experience for users interested in dance and classes and events. My site showcases a vibrant , engaging aesthetic that captures the energetic and retro 
 spirit of swing dancing, enticing prospective students and attendees. My site includes an aesthetic composed of a vintage pastel color pallette and font typeface collection inspired by the cinematic works of directors like Wes Anderson, which I feel lends itself 
